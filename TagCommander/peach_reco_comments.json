@@ -1,0 +1,152 @@
+{
+  "peach_schema_version": "1.0.0",
+  "peach_implementation_version": "0.0.1",
+  "site_key": "✅chrts00000000031",
+  "session_start_timestamp": 1511802218359,
+  "sent_timestamp": 1511802219043,
+  "collect_timestamp": 1511804006063,
+  "user_id": "⚪️ Not implemented. Only for logged user.",
+  "client": {
+    "id": "⚠️TC_UNIQUEID is correct?",
+    "type": "✅hardcoded. mobileapp",
+    "app_id": "✅TC_BUNDLE_IDENTIFIER",
+    "name": "⚠️ RTSPlayer, not Play RTS",
+    "version": "✅TC_APPLICATION_VERSION",
+    "device": {
+      "type": "🔴 missing information",
+      "vendor": "✅TC_MANUFACTURER",
+      "model": "✅ TC_DEVICE, TC_MODEL is just iPhone",
+      "screen_size": "✅TC_SCREEN",
+      "language": "TC_LANGUAGE_GA",
+      "timezone": -1
+    },
+    "os": {
+      "name": "✅TC_RUNTIME_NAME, TC_SYSNAME isn't lowercase",
+      "version": "✅TC_SYSVERSION"
+    }
+  },
+  "events": [
+    {
+      "type": "⚪️recommendation_hit",
+      "id": "io.ebu.peach:reco18",
+      "event_timestamp": 1511804006061,
+      "page_start_timestamp": 1511804006000,
+      "context": {
+        "items": [
+          "URN:XXY",
+          "URN:XXZ"
+        ],
+        "items_displayed": 8,
+        "hit_index": 0,
+        "page_uri": "example.org/section1/path",
+        "source": "main-section.news.reco3",
+        "component": {
+          "type": "carousel",
+          "name": "SuperCarousel",
+          "version": "2.3.4"
+        }
+      }
+    },
+    {
+      "type": "⚠️ play, not media_play",
+      "id": "media_urn",
+      "event_timestamp": 1511804006061,
+      "page_start_timestamp": 1511804006000,
+      "props": {
+        "time_spent_s": 123.3,
+        "playback_position_s": 12.9,
+        "previous_playback_position_s": 2.9,
+        "video_mode": "⚪️ Not implemented",
+        "audio_mode": "⚪️ Not implemented",
+        "playback_rate": 1.0,
+        "volume": 0.5,
+        "qos": {
+        }
+      },
+      "context": {
+        "id": "io.ebu.peach:reco18",
+        "referrer": "http://facebook.com/...",
+        "page_uri": "example.org/section1/path",
+        "source": "main-section.news.reco3",
+        "component": {
+          "type": "✅hardcoded",
+          "name": "⚠️ media_player_display",
+          "version": "⚠️ media_player_version"
+        }
+      },
+      "metadata": {
+        "type": "✅media_type",
+        "format": "⚪️ Not implemented 🔴?",
+        "episodeId": "⚠️media_episode_id, not URN",
+        "showId": "⚠️media_show_id, not URN",
+        "duration": 1779.8,
+        "title": "⚪️ Not implemented"
+      }
+    },
+    {
+      "type": "media_seek",
+      "id": "URN:XXX",
+      "event_timestamp": 1511804006061,
+      "page_start_timestamp": 1511804006000,
+      "props": {
+        "time_spent_s": 123.3,
+        "playback_position_s": 60,
+        "previous_playback_position_s": 0,
+        "seek_to_position_s": 600,
+        "video_mode": "normal",
+        "audio_mode": "normal",
+        "playback_rate": 1.0,
+        "volume": 0.5,
+        "qos": {
+        }
+      },
+      "context": {
+        "id": "io.ebu.peach:reco18",
+        "referrer": "http://facebook.com/...",
+        "page_uri": "example.org/section1/path",
+        "source": "main-section.news.reco3",
+        "component": {
+          "type": "player",
+          "name": "ExoPlayer",
+          "version": "Major.Minor.hotfix"
+        }
+      },
+      "metadata": {
+        "type": "video",
+        "format": "ondemand",
+        "episodeId": "URN:XXX",
+        "showId": "URN:XXX",
+        "duration": 1779.8,
+        "title": "xyz"
+      }
+    },
+    {
+      "type": "⚪️article_end",
+      "id": "URN:XXX",
+      "event_timestamp": 1511804006061,
+      "page_start_timestamp": 1511804006000,
+      "props": {
+        "time_spent_s": 123.3,
+        "completion_ratio": 0.8,
+        "position_ratio": 0.4
+      },
+      "context": {
+        "id": "io.ebu.peach:reco18",
+        "page_uri": "example.org/section1/path",
+        "source": "main-section.news.reco3",
+        "component": {
+          "type": "newsTicker",
+          "name": "bbcnewsTicker",
+          "version": "Major.Minor.hotfix"
+        }
+      },
+      "metadata": {
+        "type": "article",
+        "format": "storytelling",
+        "length": 27878,
+        "sectionId": "URN:XXX",
+        "title": "xyz"
+      }
+    }
+  ]
+}
