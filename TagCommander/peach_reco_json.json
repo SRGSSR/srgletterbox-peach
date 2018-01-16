@@ -2,77 +2,47 @@
   "peach_schema_version": "1.0.0",               
   "peach_implementation_version":"0.0.1",        
   "site_key": "chrts00000000031",                
-
-  "session_start_timestamp" : 1511802218359,     
-                                                 
-                                                 
-                                                 
-                                                 
-                                                 
-                                                 
-         
-  "sent_timestamp" : 1511802219043,
+  "session_start_timestamp" : #session_start_timestamp#,            
+  "sent_timestamp" : #sent_timestamp#,
   "client": {                                    
-    
-    "id" : "TC_UNIQUEID",                           
-                                                 
-                                                 
-                                                  
-    "type" : "mobileapp",                        
-                    
-    "app_id" : "TC_BUNDLE_IDENTIFIER",            
-    "name" : "TC_APPLICATION_NAME",                         
-    "version": "TC_APPLICATION_VERSION",             
-                                                  
+    "id" : "#client_id#",                                                                         
+    "type" : "mobileapp",                                        
+    "app_id" : "#client_app_id#",            
+    "name" : "#client_name#",                         
+    "version": "#client_version#",                                                             
     "device" :{                                  
-      "type":"⚠️",                            
-      "vendor": "TC_MANUFACTURER",                         
-      "model": "TC_DEVICE",                     
-      "screen_size": "TC_SCREEN",                
-      "language": "TC_LANGUAGE_GA"
-    },                                          
-                                                  
+      "type":"#client_device_type#",                            
+      "vendor": "#client_device_vendor#",                         
+      "model": "#client_device_model#",                     
+      "screen_size": "#client_device_screen_size#",                
+      "language": "#client_device_language#"
+    },                                                                                        
     "os" :{                                      
-      "name": "TC_RUNTIME_NAME",                             
-      "version": "TC_SYSVERSION"            
+      "name": "#client_os_name#",                             
+      "version": "#client_os_version#"            
     } 
   },
-  
   "events" : [                                   
-  
     {                                            
-      "type": "event_id",                      
-                                                 
-                                                 
-      
-      "id": "media_urn",                           
-      "event_timestamp": 1511804006061,
+      "type": "#event_type#",                      
+      "id": "#event_id#",                           
+      "event_timestamp": #event_timestamp#,
       "props" : {                                
-        "playback_position_s": 12.9
-      },
-                          
+        "playback_position_s": #event_props_playback_position_s#,
+        "playback_rate": 1.0
+      },                
       "context" : {                              
-        "id": "io.ebu.peach:reco18",             
-        "referrer": "http://facebook.com/...",   
-        "page_uri" : "example.org/section1/path",
-        "source" : "main-section.news.reco3",    
-                                                 
-                                                  
         "component" : {                          
           "type": "player",                      
-          "name": "media_player_display",                   
-          "version": "media_player_version"        
+          "name": "#event_context_component_name#",                   
+          "version": "#event_context_component_version#"        
         }
       },
-      
-      "metadata" : {                             
-                                                 
-                                                 
-                                                 
-        "type": "media_type",
-        "episodeId": "media_episode_id",                  
-        "showId": "media_show_id",                     
-        "duration": 1779.8
+      "metadata" : {                                                                      
+        "type": "#event_context_metadata_type#",
+        "episodeId": "#event_context_metadata_episode_id#",                  
+        "showId": "#event_context_metadata_show_id#",                     
+        "duration": #event_context_metadata_duration#
       }
     }
   ]      

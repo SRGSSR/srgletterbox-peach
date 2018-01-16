@@ -1,28 +1,28 @@
 {
   "peach_schema_version": "1.0.0",
   "peach_implementation_version": "0.0.1",
-  "site_key": "✅chrts00000000031",
-  "session_start_timestamp": 1511802218359,
-  "sent_timestamp": 1511802219043,
-  "collect_timestamp": 1511804006063,
+  "site_key": "✅ hardcoded: chrts00000000031",
+  "session_start_timestamp": "✅ TC_CURRENT_VISIT_MS, number",
+  "sent_timestamp": "✅ TC_NOW_MS, number",
+  "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
   "user_id": "⚪️ Not implemented. Only for logged user.",
   "client": {
     "id": "⚠️TC_UNIQUEID is correct?",
-    "type": "✅hardcoded. mobileapp",
-    "app_id": "✅TC_BUNDLE_IDENTIFIER",
-    "name": "⚠️ RTSPlayer, not Play RTS",
-    "version": "✅TC_APPLICATION_VERSION",
+    "type": "✅ hardcoded: mobileapp",
+    "app_id": "✅ TC_BUNDLE_IDENTIFIER",
+    "name": "⚠️ TC_APPLICATION_NAME, RTSPlayer, not Play RTS",
+    "version": "✅ TC_APPLICATION_VERSION",
     "device": {
-      "type": "🔴 missing information",
-      "vendor": "✅TC_MANUFACTURER",
+      "type": "🔴 Missing information.",
+      "vendor": "✅ TC_MANUFACTURER",
       "model": "✅ TC_DEVICE, TC_MODEL is just iPhone",
-      "screen_size": "✅TC_SCREEN",
-      "language": "TC_LANGUAGE_GA",
-      "timezone": -1
+      "screen_size": "✅ TC_SCREEN",
+      "language": "✅ TC_LANGUAGE_GA",
+      "timezone": "⚪️ Not implemented, number"
     },
     "os": {
-      "name": "✅TC_RUNTIME_NAME, TC_SYSNAME isn't lowercase",
-      "version": "✅TC_SYSVERSION"
+      "name": "✅ TC_RUNTIME_NAME, TC_SYSNAME isn't lowercase",
+      "version": "✅ TC_SYSVERSION"
     }
   },
   "events": [
@@ -48,38 +48,38 @@
       }
     },
     {
-      "type": "⚠️ play, not media_play",
-      "id": "media_urn",
-      "event_timestamp": 1511804006061,
-      "page_start_timestamp": 1511804006000,
+      "type": "⚠️ event_id, play, not media_play",
+      "id": "✅ media_urn",
+      "event_timestamp": "✅ TC_NOW_MS, number",
+      "page_start_timestamp": "⚪️ Not implemented, number",
       "props": {
-        "time_spent_s": 123.3,
-        "playback_position_s": 12.9,
-        "previous_playback_position_s": 2.9,
-        "video_mode": "⚪️ Not implemented",
-        "audio_mode": "⚪️ Not implemented",
-        "playback_rate": 1.0,
-        "volume": 0.5,
+        "time_spent_s": "⚪️ Not implemented, number",
+        "playback_position_s": "✅ media_position, number",
+        "previous_playback_position_s": "⚪️ Not implemented, number",
+        "video_mode": "⚪️ Not implemented.",
+        "audio_mode": "⚪️ Not implemented.",
+        "playback_rate": "✅ hardcoded 1.0, number",
+        "volume": "⚪️ Not implemented, number",
         "qos": {
         }
       },
       "context": {
-        "id": "io.ebu.peach:reco18",
-        "referrer": "http://facebook.com/...",
-        "page_uri": "example.org/section1/path",
-        "source": "main-section.news.reco3",
+        "id": "⚪️ Not implemented.",
+        "referrer": "⚪️ Not implemented.",
+        "page_uri": "⚪️ Not implemented.",
+        "source": "⚪️ Not implemented.",
         "component": {
-          "type": "✅hardcoded",
-          "name": "⚠️ media_player_display",
-          "version": "⚠️ media_player_version"
+          "type": "✅ player, hardcoded",
+          "name": "⚠️ media_player_display, SRGMediaPlayer",
+          "version": "⚠️ media_player_version, 2.2.1"
         }
       },
       "metadata": {
-        "type": "✅media_type",
+        "type": "⚠️ media_type, Video not video",
         "format": "⚪️ Not implemented 🔴?",
-        "episodeId": "⚠️media_episode_id, not URN",
-        "showId": "⚠️media_show_id, not URN",
-        "duration": 1779.8,
+        "episodeId": "⚠️ media_episode_id, not URN",
+        "showId": "⚠️ media_show_id, not URN",
+        "duration": "✅ media_segment_length, number",
         "title": "⚪️ Not implemented"
       }
     },
