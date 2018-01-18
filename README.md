@@ -37,29 +37,32 @@ Specifications are in the `Specifications` folder.
 
 | JSON | Key | tag commander |
 |:--:|:--:|:--:|:--:|
+| / | #peach_site_key# | Select the good one |
 | / | #session_start_timestamp# | TC_CURRENT_VISIT_MS|
 | / | #sent_timestamp# | TC_NOW_MS |
 | /client/ | #client_id# | TC_UNIQUEID |
 | /client/ | #client_app_id# | TC_BUNDLE_IDENTIFIER |
 | /client/ | #client_name# | TC_APPLICATION_NAME |
 | /client/ | #client_version# | TC_APPLICATION_VERSION |
-| /client/device/ | #client_device_type# | ??? |
+| /client/device/ | #client_device_type# | navigation_device |
 | /client/device/ | #client_device_vendor# | TC_MANUFACTURER |
 | /client/device/ | #client_device_model# | TC_DEVICE |
-| /client/device/ | #client_device_vendor# | TC_SCREEN |
-| /client/device/ | #client_device_screen_size# | TC_MANUFACTURER |
+| /client/device/ | #client_device_screen_size# | TC_SCREEN |
 | /client/device/ | #client_device_language# | TC_LANGUAGE_GA |
 | /client/os/ | #client_os_name# | TC_RUNTIME_NAME |
 | /client/os/ | #client_os_version# | TC_SYSVERSION |
-| /events/[]/ | #event_type# | event_id |
+| /events/[]/ | #event_type# | peach_event_type (from event_id) |
 | /events/[]/ | #event_id# | media_urn |
 | /events/[]/ | #event_timestamp# | TC_NOW_MS |
 | /events/[]/props/ | #event_props_playback_position_s# | media_position |
+| /events/[]/props/ | #event_props_playback_timeshift_s# | media_timeshift |
 | /events/[]/context/component | #event_context_component_name# | media_player_display |
 | /events/[]/context/component | #event_context_component_version# | media_player_version |
-| /events/[]/context/metadata | #event_context_metadata_type# | media_type |
+| /events/[]/context/metadata | #event_context_metadata_type# | peach_media_type (from media_type) |
+| /events/[]/context/metadata | #event_context_metadata_format# | peach_media_format (from media_type) |
 | /events/[]/context/metadata | #event_context_metadata_episode_id# | media_episode_id |
 | /events/[]/context/metadata | #event_context_metadata_show_id# | media_show_id |
+| /events/[]/context/metadata | #event_context_metadata_producer# | media_enterprise_units |
 | /events/[]/context/metadata | #event_context_metadata_duration# | media_segment_length |
 
 

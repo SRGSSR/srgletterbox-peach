@@ -1,7 +1,7 @@
 {
   "peach_schema_version": "1.0.0",
   "peach_implementation_version": "0.0.1",
-  "site_key": "✅ hardcoded: chrts00000000031",
+  "site_key": "✅ peach_site_key, defined in TC",
   "session_start_timestamp": "✅ TC_CURRENT_VISIT_MS, number",
   "sent_timestamp": "✅ TC_NOW_MS, number",
   "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "type": "⚠️ event_id, play, not media_play",
+      "type": "✅ ℹ️ peach_event_type, transform on TC from event_id: play -> media_play",
       "id": "✅ media_urn",
       "event_timestamp": "✅ TC_NOW_MS, number",
       "page_start_timestamp": "⚪️ Not implemented, number",
@@ -56,6 +56,7 @@
         "time_spent_s": "⚪️ Not implemented, number",
         "playback_position_s": "✅ media_position, number",
         "previous_playback_position_s": "⚪️ Not implemented, number",
+        "playback_timeshift_s": "✅ media_timeshift, number",
         "video_mode": "⚪️ Not implemented.",
         "audio_mode": "⚪️ Not implemented.",
         "playback_rate": "✅ hardcoded 1.0, number",
@@ -75,10 +76,11 @@
         }
       },
       "metadata": {
-        "type": "⚠️ media_type, Video not video",
-        "format": "⚪️ Not implemented 🔴?",
-        "episodeId": "⚠️ media_episode_id, not URN",
-        "showId": "⚠️ media_show_id, not URN",
+        "type": "✅ ℹ️ peach_media_type, transform on TC from media_type: Video -> video",
+        "format": "✅ ℹ️ peach_media_format, transform on TC from media_is_livestream: true ->ondemand/livestream",
+        "episode_id": "⚠️ media_episode_id, not URN",
+        "show_id": "⚠️ media_show_id, not URN",
+        "producer": "✅ media_enterprise_units",
         "duration": "✅ media_segment_length, number",
         "title": "⚪️ Not implemented"
       }
