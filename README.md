@@ -28,9 +28,10 @@ Specifications are in the `Specifications` folder.
 
 ###Rules
 
- - Media URN not empty
- - media_enterprise_units is RTS
- - media_embedding_environment is preprod
+ - media_urn not empty
+ - peach_event_type not empty
+ - media_enterprise_units is "RTS"
+ - media_embedding_environment is "preprod"
 
  
 ### Keys
