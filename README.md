@@ -57,6 +57,7 @@ Specifications are in the `Specifications` folder.
 | /events/[]/ | #event_timestamp# | TC_NOW_MS |
 | /events/[]/props/ | #event_props_playback_position_s# | media_position |
 | /events/[]/props/ | #event_props_playback_timeshift_s# | media_timeshift |
+| /events/[]/context| #page_uri# | page_unique_name |
 | /events/[]/context/component | #event_context_component_name# | media_player_display |
 | /events/[]/context/component | #event_context_component_version# | media_player_version |
 | /events/[]/context/metadata | #event_context_metadata_type# | peach_media_type (from media_type) |

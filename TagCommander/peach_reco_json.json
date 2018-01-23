@@ -33,6 +33,7 @@
         "playback_rate": 1.0
       },                
       "context" : {                              
+        "page_uri" : "#page_uri#",                             
         "component" : {                          
           "type": "player",                      
           "name": "#event_context_component_name#",                   
