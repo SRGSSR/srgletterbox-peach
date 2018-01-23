@@ -1,6 +1,6 @@
-#` Tag Commander (TC) integration
+# Tag Commander (TC) integration
 
-\#variables\#` are replaced by the appropriate values.
+`#variables#` are replaced by the appropriate values.
 
 ##Rules
 
@@ -9,11 +9,11 @@
  - `media_enterprise_units` is `RTS`.
  - `media_embedding_environment` is `preprod`.
 
-##` URL
+## URL
 
 Get URL: `https://pipe-collect.ebu.io/v1/collect?s=#peach_site_key#&e=#peach_media_type#&d=#navigation_device#`
 
-- test RTS site key: `chrts00000000031`.
+- Test RTS site key: `chrts00000000031`.
 - Prod RTS site key: `chrts00000000032`.
 
 | Parameter | Key | Tag Commander | Comment |
@@ -22,11 +22,11 @@ Get URL: `https://pipe-collect.ebu.io/v1/collect?s=#peach_site_key#&e=#peach_med
 | e | `#peach_media_type#` | `peach_media_type` |  Transformed on `TC from `media_type` |
 | d | `#navigation_device#` | `navigation_device` | Device type `phone`or `tablet` |
 
-Post body: a json, based on EBU specifications.
+Post body: a JSON, based on EBU specifications.
 Specifications are in the `Specifications` folder.
 
  
-###` JSON body
+### JSON body
 
 The file `tc_peach_letterbox_collect.json` is a saved copy of the body.
 The file `tc_peach_letterbox_collect_comments.json` is a copy of EBU specification with implementation comments.

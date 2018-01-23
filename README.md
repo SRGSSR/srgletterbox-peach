@@ -5,8 +5,8 @@
 
 The Technical Play currently send data in a POST request.
 
-Video: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=video
-Audio: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=audio
+- Video: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=video
+- Audio: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=audio
 
 The POST request sends a JSON, build with a `pipe.js` script.
 
@@ -16,7 +16,7 @@ The mobile team decided to use the Tag Commander architecture. Letterbox iOS and
 
 ## Tag Commander
 
-`https://v6.commandersact.com`
+https://v6.commandersact.com
 
 Peach has tags in the `Measurement lirbary (Letterbox)` container.
 
