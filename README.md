@@ -29,7 +29,7 @@ Specifications are in the `Specifications` folder.
 ###Rules
 
  - media_urn not empty
- - peach_event_type not empty
+ - event_id is play || seek || pause || stop || eof || pos
  - media_enterprise_units is "RTS"
  - media_embedding_environment is "preprod"
 
