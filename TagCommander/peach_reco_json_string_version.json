@@ -2,8 +2,8 @@
   "peach_schema_version": "1.0.0",               
   "peach_implementation_version":"0.0.1",        
   "site_key": "#peach_site_key#",         
-  "session_start_timestamp": #session_start_timestamp#,            
-  "sent_timestamp": #sent_timestamp#,
+  "session_start_timestamp": "#session_start_timestamp#",            
+  "sent_timestamp": "#sent_timestamp#",
   "client": {                                    
     "id" : "#client_id#",                                                                         
     "type" : "mobileapp",                                        
@@ -26,11 +26,11 @@
     {                                            
       "type": "#event_type#",                      
       "id": "#event_id#",                           
-      "event_timestamp": #event_timestamp#,
+      "event_timestamp": "#event_timestamp#",
       "props" : {                                
-        "playback_position_s": #event_props_playback_position_s#,
-        "playback_timeshift_s": #event_props_playback_timeshift_s#,
-        "playback_rate": 1.0
+        "playback_position_s": "#event_props_playback_position_s#",
+        "playback_timeshift_s": "#event_props_playback_timeshift_s#",
+        "playback_rate": "1.0"
       },                
       "context" : {
         "page_uri" : "#page_uri#",                             
@@ -46,7 +46,7 @@
         "episode_id": "#event_context_metadata_episode_id#",                  
         "show_id": "#event_context_metadata_show_id#", 
         "producer": "#event_context_metadata_producer#",
-        "duration": #event_context_metadata_duration#
+        "duration": "#event_context_metadata_duration#"
       }
     }
   ]      
