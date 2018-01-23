@@ -189,9 +189,9 @@
                                                   // Rogue data can be ingested by malicious clients.
         "type": "video",                          // Should [audio|video|article|page] 
         "format": "ondemand",                     // Could for audio/video: ondemand|livestream
-        "episode_id": "URN:XXX",                  // Could
         "episode_id": "ID",                       // Could.
-        "show_id": "ID",                          // Could.    
+        "show_id": "ID",                          // Could.
+        "producer": "RTS",                         // Could.
         "duration": 1779.8,                       // Should [seconds] , 0 for live.  
         "title" : "xyz"                           // AVOID                    
       }

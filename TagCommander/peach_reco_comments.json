@@ -7,13 +7,13 @@
   "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
   "user_id": "⚪️ Not implemented. Only for logged user.",
   "client": {
-    "id": "⚠️TC_UNIQUEID is correct?",
+    "id": "✅ TC_UNIQUEID",
     "type": "✅ hardcoded: mobileapp",
     "app_id": "✅ TC_BUNDLE_IDENTIFIER",
     "name": "✅ ℹ️ pretty_app_name, server side",
     "version": "✅ TC_APPLICATION_VERSION",
     "device": {
-      "type": "🔴 Missing information.",
+      "type": "✅ navigation_device",
       "vendor": "✅ TC_MANUFACTURER",
       "model": "✅ TC_DEVICE, TC_MODEL is just iPhone",
       "screen_size": "✅ TC_SCREEN",
@@ -78,8 +78,8 @@
       "metadata": {
         "type": "✅ ℹ️ peach_media_type, transform on TC from media_type: Video -> video",
         "format": "✅ ℹ️ peach_media_format, transform on TC from media_is_livestream: true ->ondemand/livestream",
-        "episode_id": "⚠️ media_episode_id, not URN",
-        "show_id": "⚠️ media_show_id, not URN",
+        "episode_id": "✅ media_episode_id, not URN",
+        "show_id": "✅ media_show_id, not URN",
         "producer": "✅ media_enterprise_units",
         "duration": "✅ media_segment_length, number",
         "title": "⚪️ Not implemented"
