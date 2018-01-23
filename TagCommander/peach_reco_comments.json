@@ -10,7 +10,7 @@
     "id": "⚠️TC_UNIQUEID is correct?",
     "type": "✅ hardcoded: mobileapp",
     "app_id": "✅ TC_BUNDLE_IDENTIFIER",
-    "name": "⚠️ TC_APPLICATION_NAME, RTSPlayer, not Play RTS",
+    "name": "✅ ℹ️ pretty_app_name, server side",
     "version": "✅ TC_APPLICATION_VERSION",
     "device": {
       "type": "🔴 Missing information.",

@@ -43,7 +43,7 @@ Specifications are in the `Specifications` folder.
 | / | #sent_timestamp# | TC_NOW_MS |
 | /client/ | #client_id# | TC_UNIQUEID |
 | /client/ | #client_app_id# | TC_BUNDLE_IDENTIFIER |
-| /client/ | #client_name# | TC_APPLICATION_NAME |
+| /client/ | #client_name# | pretty_app_name |
 | /client/ | #client_version# | TC_APPLICATION_VERSION |
 | /client/device/ | #client_device_type# | navigation_device |
 | /client/device/ | #client_device_vendor# | TC_MANUFACTURER |
