@@ -12,64 +12,20 @@ The POST request sends a JSON, build with a `pipe.js` script.
 
 ## Mobile version for Letterbox
 
-The mobile team decided to use the Tag Commander architecture. Letterbox iOS and Android are already send stream measurement to WebTreck.
+The mobile team decided to use the Tag Commander architecture. Letterbox iOS and Android are already send stream measurements to WebTreck through Tag Commander with the Tag Commander SDK, integrated in SRGAnalytics libraries.
 
-## Variables
+## Tag Commander
 
-test site key: `chrts00000000031`.
-Prod site key: `chrts00000000032`.
+`https://v6.commandersact.com`
 
-Specifications are in the `Specifications` folder.
+Peach has tags in the `Measurement lirbary (Letterbox)` container.
 
 ## Current version in production
 
 - Peach schema version: 1.0.0               
-- Peach implementation version: 0.0.1
+- Peach implementation version: 0.9.0
 
-###Rules
-
- - media_urn not empty
- - event_id is play || seek || pause || stop || eof || pos
- - media_enterprise_units is "RTS"
- - media_embedding_environment is "preprod"
-
- 
-### Keys
-
-| JSON | Key | tag commander |
-|:--:|:--:|:--:|:--:|
-| / | #peach_site_key# | Select the good one |
-| / | #session_start_timestamp# | TC_CURRENT_VISIT_MS|
-| / | #sent_timestamp# | TC_NOW_MS |
-| /client/ | #client_id# | TC_UNIQUEID |
-| /client/ | #client_app_id# | TC_BUNDLE_IDENTIFIER |
-| /client/ | #client_name# | pretty_app_name |
-| /client/ | #client_version# | TC_APPLICATION_VERSION |
-| /client/device/ | #client_device_type# | navigation_device |
-| /client/device/ | #client_device_vendor# | TC_MANUFACTURER |
-| /client/device/ | #client_device_model# | TC_DEVICE |
-| /client/device/ | #client_device_screen_size# | TC_SCREEN |
-| /client/device/ | #client_device_language# | TC_LANGUAGE_GA |
-| /client/os/ | #client_os_name# | TC_RUNTIME_NAME |
-| /client/os/ | #client_os_version# | TC_SYSVERSION |
-| /events/[]/ | #event_type# | peach_event_type (from event_id) |
-| /events/[]/ | #event_id# | media_urn |
-| /events/[]/ | #event_timestamp# | TC_NOW_MS |
-| /events/[]/props/ | #event_props_playback_position_s# | media_position |
-| /events/[]/props/ | #event_props_playback_timeshift_s# | media_timeshift |
-| /events/[]/context| #page_uri# | page_unique_name |
-| /events/[]/context/component | #event_context_component_name# | media_player_display |
-| /events/[]/context/component | #event_context_component_version# | media_player_version |
-| /events/[]/context/metadata | #event_context_metadata_type# | peach_media_type (from media_type) |
-| /events/[]/context/metadata | #event_context_metadata_format# | peach_media_format (from media_type) |
-| /events/[]/context/metadata | #event_context_metadata_episode_id# | media_episode_id |
-| /events/[]/context/metadata | #event_context_metadata_show_id# | media_show_id |
-| /events/[]/context/metadata | #event_context_metadata_producer# | media_enterprise_units |
-| /events/[]/context/metadata | #event_context_metadata_duration# | media_segment_length |
-
-
-
-
+JSON body integration is in [Tag Commander Integration document](Documentation/Tag-Commander-Integration.md).
 
 
 

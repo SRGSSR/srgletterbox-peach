@@ -1,28 +1,28 @@
 {
   "peach_schema_version": "1.0.0",
-  "peach_implementation_version": "0.0.1",
-  "site_key": "✅ peach_site_key, defined in TC",
-  "session_start_timestamp": "✅ TC_CURRENT_VISIT_MS, number",
-  "sent_timestamp": "✅ TC_NOW_MS, number",
+  "peach_implementation_version": "0.9.0",
+  "site_key": "✅",
+  "session_start_timestamp": "✅ Should be a number",
+  "sent_timestamp": "✅ Should be a number",
   "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
   "user_id": "⚪️ Not implemented. Only for logged user.",
   "client": {
-    "id": "✅ TC_UNIQUEID",
+    "id": "✅",
     "type": "✅ hardcoded: mobileapp",
-    "app_id": "✅ TC_BUNDLE_IDENTIFIER",
-    "name": "✅ ℹ️ pretty_app_name, server side",
-    "version": "✅ TC_APPLICATION_VERSION",
+    "app_id": "✅",
+    "name": "✅",
+    "version": "✅",
     "device": {
-      "type": "✅ navigation_device",
-      "vendor": "✅ TC_MANUFACTURER",
-      "model": "✅ TC_DEVICE, TC_MODEL is just iPhone",
-      "screen_size": "✅ TC_SCREEN",
-      "language": "✅ TC_LANGUAGE_GA",
+      "type": "✅",
+      "vendor": "✅",
+      "model": "✅",
+      "screen_size": "✅",
+      "language": "✅",
       "timezone": "⚪️ Not implemented, number"
     },
     "os": {
-      "name": "✅ TC_RUNTIME_NAME, TC_SYSNAME isn't lowercase",
-      "version": "✅ TC_SYSVERSION"
+      "name": "✅",
+      "version": "✅"
     }
   },
   "events": [
@@ -48,15 +48,15 @@
       }
     },
     {
-      "type": "✅ ℹ️ peach_event_type, transform on TC from event_id: play -> media_play",
-      "id": "✅ media_urn",
-      "event_timestamp": "✅ TC_NOW_MS, number",
+      "type": "✅",
+      "id": "✅",
+      "event_timestamp": "✅ Should be a number",
       "page_start_timestamp": "⚪️ Not implemented, number",
       "props": {
         "time_spent_s": "⚪️ Not implemented, number",
-        "playback_position_s": "✅ media_position, number",
+        "playback_position_s": "✅ Should be a number",
         "previous_playback_position_s": "⚪️ Not implemented, number",
-        "playback_timeshift_s": "✅ media_timeshift, number",
+        "playback_timeshift_s": "✅ Should be a number",
         "video_mode": "⚪️ Not implemented.",
         "audio_mode": "⚪️ Not implemented.",
         "playback_rate": "✅ hardcoded 1.0, number",
@@ -67,21 +67,21 @@
       "context": {
         "id": "⚪️ Not implemented.",
         "referrer": "⚪️ Not implemented.",
-        "page_uri": "✅ ℹ️ page_unique_name, server side",
+        "page_uri": "✅",
         "source": "⚪️ Not implemented.",
         "component": {
           "type": "✅ player, hardcoded",
-          "name": "⚠️ media_player_display, SRGMediaPlayer",
-          "version": "⚠️ media_player_version, 2.2.1"
+          "name": "⚠️ SRGMediaPlayer ?",
+          "version": "⚠️ 2.2.1 ?"
         }
       },
       "metadata": {
-        "type": "✅ ℹ️ peach_media_type, transform on TC from media_type: Video -> video",
-        "format": "✅ ℹ️ peach_media_format, transform on TC from media_is_livestream: true ->ondemand/livestream",
-        "episode_id": "✅ media_episode_id, not URN",
-        "show_id": "✅ media_show_id, not URN",
-        "producer": "✅ media_enterprise_units",
-        "duration": "✅ media_segment_length, number",
+        "type": "✅",
+        "format": "✅",
+        "episode_id": "✅",
+        "show_id": "✅",
+        "producer": "✅",
+        "duration": "✅ Should be a number",
         "title": "⚪️ Not implemented"
       }
     },
