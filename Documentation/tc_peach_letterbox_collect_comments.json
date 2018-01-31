@@ -1,153 +1,67 @@
 {
-  "peach_schema_version": "1.0.0",
-  "peach_implementation_version": "0.9.0",
-  "site_key": "✅",
-  "session_start_timestamp": "✅ Should be a number",
-  "sent_timestamp": "✅ Should be a number",
+  "peach_schema_version": "1.0.0, hardcoded.",
+  "peach_implementation_version": "0.9.0, hardcoded.",
+  "site_key": "✅ chrts00000000031 for test, chrts00000000032 for prod.",
+  "session_start_timestamp": "✅ String, converted from a number. Timestamp in milliseconds.",
+  "sent_timestamp": "✅ String, converted from a number. Timestamp in milliseconds.",
   "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
   "user_id": "⚪️ Not implemented. Only for logged user.",
   "client": {
-    "id": "✅",
-    "type": "✅ hardcoded: mobileapp",
-    "app_id": "✅",
-    "name": "✅",
-    "version": "✅",
+    "id": "✅ Globaly unique id. Tag Commander unique id.",
+    "type": "✅ \"mobileapp\", hardcoded.",
+    "app_id": "✅ App Bundle identifier.",
+    "name": "✅ Pretty app name.",
+    "version": "✅ \"Major.Minor.hotfix\"",
     "device": {
-      "type": "✅",
-      "vendor": "✅",
-      "model": "✅",
-      "screen_size": "✅",
-      "language": "✅",
-      "timezone": "⚪️ Not implemented, number"
+      "type": "✅ \"phone\" | \"tablet\" | \"tvbox\"",
+      "vendor": "✅ Vendor name.",
+      "model": "✅ Device model.",
+      "screen_size": "✅ \"width x height\"",
+      "language": "✅ Google ads format. ex: \"en-US\".",
+      "timezone": "⚪️ Not implemented, number."
     },
     "os": {
-      "name": "✅",
-      "version": "✅"
+      "name": "✅ Mobile OS.",
+      "version": "✅ Mobile OS version."
     }
   },
   "events": [
     {
-      "type": "⚪️recommendation_hit",
-      "id": "io.ebu.peach:reco18",
-      "event_timestamp": 1511804006061,
-      "page_start_timestamp": 1511804006000,
-      "context": {
-        "items": [
-          "URN:XXY",
-          "URN:XXZ"
-        ],
-        "items_displayed": 8,
-        "hit_index": 0,
-        "page_uri": "example.org/section1/path",
-        "source": "main-section.news.reco3",
-        "component": {
-          "type": "carousel",
-          "name": "SuperCarousel",
-          "version": "2.3.4"
-        }
-      }
-    },
-    {
-      "type": "✅",
-      "id": "✅",
-      "event_timestamp": "✅ Should be a number",
-      "page_start_timestamp": "⚪️ Not implemented, number",
+      "type": "✅  \"media_play\" | \"media_pause\" | \"media_seek\" | \"media_stop\" | \"media_eof\" | \"media_hearbeat\"",
+      "id": "✅ Media URN. Subdivision URN if selected by the user. Otherwise, played stream URN.",
+      "event_timestamp": "✅ String, converted from a number. Timestamp in milliseconds.",
+      "page_start_timestamp": "⚪️ Not implemented, number.",
       "props": {
-        "time_spent_s": "⚪️ Not implemented, number",
-        "playback_position_s": "✅ Should be a number",
-        "previous_playback_position_s": "⚪️ Not implemented, number",
-        "playback_timeshift_s": "✅ Should be a number",
+        "time_spent_s": "⚪️ Not implemented, number.",
+        "playback_position_s": "✅ String, converted from a number. In seconds. OnDemand: position, Livestream: time consumed.",
+        "previous_playback_position_s": "⚪️ Not implemented, number.",
+        "playback_timeshift_s": "✅ String, converted from a number. In seconds. OnDemand: empty, Livestream: 0 if live, distance to the live if timesift > 30 seconds.",
         "video_mode": "⚪️ Not implemented.",
         "audio_mode": "⚪️ Not implemented.",
-        "playback_rate": "✅ hardcoded 1.0, number",
-        "volume": "⚪️ Not implemented, number",
+        "playback_rate": "✅ hardcoded 1.0, number.",
+        "volume": "⚪️ Not implemented, number.",
         "qos": {
         }
       },
       "context": {
         "id": "⚪️ Not implemented.",
         "referrer": "⚪️ Not implemented.",
-        "page_uri": "✅",
+        "page_uri": "ℹ️ Only the app_site_name",
         "source": "⚪️ Not implemented.",
         "component": {
-          "type": "✅ player, hardcoded",
-          "name": "⚠️ SRGMediaPlayer ?",
-          "version": "⚠️ 2.2.1 ?"
+          "type": "✅ \"player\", hardcoded.",
+          "name": "✅ SRGMediaPlayer or ExoPlayer.",
+          "version": "✅ Player version."
         }
       },
       "metadata": {
-        "type": "✅",
-        "format": "✅",
-        "episode_id": "✅",
-        "show_id": "✅",
-        "producer": "✅",
-        "duration": "✅ Should be a number",
-        "title": "⚪️ Not implemented"
-      }
-    },
-    {
-      "type": "media_seek",
-      "id": "URN:XXX",
-      "event_timestamp": 1511804006061,
-      "page_start_timestamp": 1511804006000,
-      "props": {
-        "time_spent_s": 123.3,
-        "playback_position_s": 60,
-        "previous_playback_position_s": 0,
-        "seek_to_position_s": 600,
-        "video_mode": "normal",
-        "audio_mode": "normal",
-        "playback_rate": 1.0,
-        "volume": 0.5,
-        "qos": {
-        }
-      },
-      "context": {
-        "id": "io.ebu.peach:reco18",
-        "referrer": "http://facebook.com/...",
-        "page_uri": "example.org/section1/path",
-        "source": "main-section.news.reco3",
-        "component": {
-          "type": "player",
-          "name": "ExoPlayer",
-          "version": "Major.Minor.hotfix"
-        }
-      },
-      "metadata": {
-        "type": "video",
-        "format": "ondemand",
-        "episodeId": "URN:XXX",
-        "showId": "URN:XXX",
-        "duration": 1779.8,
-        "title": "xyz"
-      }
-    },
-    {
-      "type": "⚪️article_end",
-      "id": "URN:XXX",
-      "event_timestamp": 1511804006061,
-      "page_start_timestamp": 1511804006000,
-      "props": {
-        "time_spent_s": 123.3,
-        "completion_ratio": 0.8,
-        "position_ratio": 0.4
-      },
-      "context": {
-        "id": "io.ebu.peach:reco18",
-        "page_uri": "example.org/section1/path",
-        "source": "main-section.news.reco3",
-        "component": {
-          "type": "newsTicker",
-          "name": "bbcnewsTicker",
-          "version": "Major.Minor.hotfix"
-        }
-      },
-      "metadata": {
-        "type": "article",
-        "format": "storytelling",
-        "length": 27878,
-        "sectionId": "URN:XXX",
-        "title": "xyz"
+        "type": "✅ \"video\" | \"audio\"",
+        "format": "✅ \"ondemand\" | \"livestream\"",
+        "episode_id": "✅ Known also as broadcast id.",
+        "show_id": "✅ Known also as program id.",
+        "producer": "✅ Business unit.",
+        "duration": "✅ String, converted from a number. In seconds. Duration of the media URN, not the episode.",
+        "title": "⚪️ Not implemented."
       }
     }
   ]
