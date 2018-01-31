@@ -11,7 +11,7 @@
 
 ## URL
 
-Get URL: `https://pipe-collect.ebu.io/v1/collect?s=#peach_site_key#&e=#peach_media_type#&d=#navigation_device#`
+Get URL: `https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&e=#peach_media_type#&d=#navigation_device#`
 
 - Test RTS site key: `chrts00000000031`.
 - Prod RTS site key: `chrts00000000032`.
