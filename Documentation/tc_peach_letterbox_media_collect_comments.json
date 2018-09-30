@@ -1,9 +1,9 @@
 {
   "peach_schema_version": "1.0.0, hardcoded.",
-  "peach_implementation_version": "0.9.0, hardcoded.",
+  "peach_implementation_version": "0.9.1, hardcoded.",
   "site_key": "✅ chrts00000000031 for test, chrts00000000032 for prod.",
-  "session_start_timestamp": "✅ Number, converted from a number. Timestamp in milliseconds.",
-  "sent_timestamp": "✅ Number, converted from a number. Timestamp in milliseconds.",
+  "session_start_timestamp": "✅ Number. Timestamp in milliseconds.",
+  "sent_timestamp": "✅ Number. Timestamp in milliseconds.",
   "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
   "user_id": "⚪️ Not implemented. Only for logged user.",
   "client": {
@@ -33,7 +33,7 @@
       "page_start_timestamp": "⚪️ Not implemented, number.",
       "props": {
         "time_spent_s": "⚪️ Not implemented, number.",
-        "playback_position_s": "✅ Number, converted from a number. In seconds. OnDemand: position, Livestream: time consumed.",
+        "playback_position_s": "✅ Number. In seconds. OnDemand: position, Livestream: time consumed.",
         "previous_playback_position_s": "⚪️ Not implemented, number.",
         "playback_timeshift_s": "✅ Number, converted from a number. In seconds. OnDemand: empty, Livestream: 0 if live, distance to the live if timesift > 30 seconds.",
         "video_mode": "⚪️ Not implemented.",
@@ -46,7 +46,7 @@
       "context": {
         "id": "⚪️ Not implemented.",
         "referrer": "⚪️ Not implemented.",
-        "page_uri": "ℹ️ Only the app_site_name",
+        "page_uri": "ℹ️ Built on TG server: only app_site_name ",
         "source": "⚪️ Not implemented.",
         "component": {
           "type": "✅ \"player\", hardcoded.",
@@ -60,7 +60,7 @@
         "episode_id": "🚮 Known also as broadcast id.",
         "show_id": "🚮 Known also as program id.",
         "producer": "🚮 Business unit.",
-        "duration": "✅ Number, converted from a number. In seconds. Duration of the media URN, not the episode.",
+        "duration": "✅ Number. In seconds. Duration of the media URN, not the episode.",
         "title": "⚪️ Not implemented."
       }
     }

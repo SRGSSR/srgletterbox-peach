@@ -57,9 +57,6 @@ The file `tc_peach_letterbox_collect_comments.json` is a copy of EBU specificati
 | /events/[]/context/component | `#event_context_component_version#` | `media_player_version` | |
 | /events/[]/context/metadata | `#event_context_metadata_type#` | `peach_media_type` | Transformed on TC from `media_type` |
 | /events/[]/context/metadata | `#event_context_metadata_format#` | `peach_media_format` | Transformed on TC from `media_is_livestream` |
-| /events/[]/context/metadata | `#event_context_metadata_episode_id#` | `media_episode_id` | Id, not URN |
-| /events/[]/context/metadata | `#event_context_metadata_show_id#` | `media_show_id` | Id, not URN |
-| /events/[]/context/metadata | `#event_context_metadata_producer#` | `media_enterprise_units` | |
 | /events/[]/context/metadata | `#event_context_metadata_duration#` | `media_segment_length` | |
 
 
