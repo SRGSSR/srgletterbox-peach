@@ -1,0 +1,81 @@
+{
+      "type": "recommendation_displayed",
+      "id": "io.ebu.peach:reco18",                // recommendation id
+      "event_timestamp": 1511804006061,           // MUST UTC timestamp of when event was fired.  
+
+      "context" : {                               
+        "items" : [ "URN:XXY", ],  // TRY TO BE CONSISTENT. USE ALWAYS LIST       
+        "items_displayed" : 1,                    // MUST Total number (accumulated) of items displayed to user
+        "page_uri" : "example.org/section1/path", // Should URL or unique identifier of app section
+        "source" : "main-section.news.reco3",     // Should UI definittion of source module, list 
+
+	"component" : {                           // Optional to desribe the way how recommendation is displayed
+          "type": "player",                     // MUST
+          "name": "RTS Player",                //
+          "version": "2.3.4",                      // version of player
+          “feature": "continuous_playback"
+        }
+     }
+}
+
+
+
+{
+      "type": "recommendation_autoplay_canceled",
+      "id": "io.ebu.peach:reco18",                // recommendation id
+      "event_timestamp": 1511804006061,           // MUST UTC timestamp of when event was fired.  
+
+      "context" : {                             
+        "items" : [ "URN:XXY", ],    // send as a list, for consistency with other recommendation events
+        "canceled_after": 1.5, //time before cancellation 
+        "page_uri" : "example.org/section1/path", // Should URL or unique identifier of app section
+        "source" : "main-section.news.reco3",     // Should UI definittion of source module, list,...
+      }
+}
+
+
+
+{
+     "type": "recommendation_hit",
+     "id": "io.ebu.peach:reco18",                // recommendation id
+     "event_timestamp": 1511804006061,           // MUST UTC timestamp of when event was fired.
+
+     "context" : {
+       "items" : [ "URN:XXY", ],     // send as a list, for consistency with other recommendation events
+       "auto_play": "true",
+       "page_uri" : "example.org/section1/path", // Should URL or unique identifier of app section
+       "source" : "main-section.news.reco3",     // Should UI definittion of source module, list,...
+     }
+}
+
+
+-------------
+
+"context" : {                               // Should
+       "id": "io.ebu.peach:ID_from_rec_API",             // add ID from recommendation API
+
+
+       -------------
+
+Proposition Play team:
+{
+      "type": "recommendation_displayed",         // recommendation_hit || recommendation_canceled
+      "id": "io.ebu.peach:reco18",                // recommendation id
+      "event_timestamp": 1511804006061,           // MUST UTC timestamp of when event was fired.  
+
+      "context" : {                               
+        "items" : [ "URN:XXY", ],  // TRY TO BE CONSISTENT. USE ALWAYS LIST       
+        "items_displayed" : 1,                    // MUST Total number (accumulated) of items displayed to user
+        "page_uri" : "example.org/section1/path", // Should URL or unique identifier of app section
+        "source" : "main-section.news.reco3",     // Should UI definittion of source module, list
+
+        "action" : "button"                       // || "automatic" || "close"  click on button, action without user interation, close the view.
+
+  "component" : {                           // Optional to desribe the way how recommendation is displayed
+          "type": "player",                     // MUST
+          "name": "RTS Player",                //
+          "version": "2.3.4",                      // version of player
+          “feature": "continuous_playback"
+        }
+     }
+}

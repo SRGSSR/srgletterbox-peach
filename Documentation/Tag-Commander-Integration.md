@@ -45,7 +45,7 @@ Specifications are in the `Specifications` folder.
 | Parameter | Key | Tag Commander | Comment |
 |:--:|:--:|:--:|:--:|
 | s | `#peach_site_key#` | Select the good one | Defined localy in `TC` |
-| e | `#peach_media_type#` | `peach_media_type` |  Transformed on `TC from `media_type` |
+| e | `#peach_media_type#` | `peach_media_type` |  Transformed on `TC` from `media_type` |
 | d | `#navigation_device#` | `navigation_device` | Device type `phone`or `tablet` |
  
 ### Post JSON body
@@ -60,7 +60,7 @@ The file `tc_peach_letterbox_media_collect_comments.json` is a copy of EBU speci
 | /events/[]/ | `#event_timestamp#` | `TC_NOW_MS` | |
 | /events/[]/props/ | `#event_props_playback_position_s#` | `media_position` | |
 | /events/[]/props/ | `#event_props_playback_timeshift_s#` | `media_timeshift` | |
-| /events/[]/context| `#page_uri#` | `page_unique_name` | Server side variable |
+| /events/[]/context | `#page_uri#` | `page_unique_name` | Server side variable |
 | /events/[]/context/component | `#event_context_component_name#` | `media_player_display` | |
 | /events/[]/context/component | `#event_context_component_version#` | `media_player_version` | |
 | /events/[]/context/metadata | `#event_context_metadata_type#` | `peach_media_type` | Transformed on TC from `media_type` |
@@ -92,4 +92,39 @@ The file `tc_peach_letterbox_pageview_collect comment.json` is a copy of EBU spe
 | JSON | Key | tag commander` | Comment |
 |:--:|:--:|:--:|:--:|
 | /events/[]/ | `#event_timestamp#` | `TC_NOW_MS` | |
-| /events/[]/context| `#page_uri#` | `page_unique_name` | Server side variable |
+| /events/[]/context | `#page_uri#` | `page_unique_name` | Server side variable |
+
+## Continuous playback tag
+
+### Rules
+
+ - `event_id` is `hidden_event`
+ - `navigation_app_site_name` is `rts-player-ios-v` or `rts-player-android-v` (Play RTS).
+ - `event_name` is `continuous_playback`.
+ - `navigation_environment` is `preprod` or `prod`.
+
+### Get url
+
+`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&d=#navigation_device#&r=#peach_reco_type#`
+
+| Parameter | Key | Tag Commander | Comment |
+|:--:|:--:|:--:|:--:|
+| s | `#peach_site_key#` | Select the good one | Defined localy in `TC` |
+| d | `#navigation_device#` | `navigation_device` | Device type `phone`or `tablet` |
+| r | `#peach_reco_type#` | `peach_reco_type ` | Peach recommendation type, based of `event_type` |
+
+### Post JSON body
+
+The file `tc_peach_letterbox_continous_playback_collect.json` is a saved copy of the body.
+The file `tc_peach_letterbox_continous_playback_collect comment.json` is a copy of EBU specification with implementation comments.
+
+| JSON | Key | tag commander` | Comment |
+|:--:|:--:|:--:|:--:|
+| /events/[]/ | `#peach_reco_type#` | `#peach_reco_type#` | Transformed on `TC` from `event_type` | |
+| /events/[]/ | `#recommendationId#` | `event_value_1` | |
+| /events/[]/ | `#event_timestamp#` | `TC_NOW_MS` | |
+| /events/[]/context | `#urn#` | `event_value` | |
+| /events/[]/context | `#page_uri#` | `page_unique_name` | Server side variable |
+| /events/[]/context | `#action#` | `event_source` | |
+| /events/[]/component | `#client_name#` | `pretty_app_name` | Server side variable |
+| /events/[]/component | `#client_version#` | `TC_APPLICATION_VERSION` | |
