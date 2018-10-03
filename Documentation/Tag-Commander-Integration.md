@@ -124,6 +124,7 @@ The file `tc_peach_letterbox_continous_playback_collect comment.json` is a copy 
 | /events/[]/ | `#recommendationId#` | `event_value_1` | |
 | /events/[]/ | `#event_timestamp#` | `TC_NOW_MS` | |
 | /events/[]/context | `#urn#` | `event_value` | |
+| /events/[]/context | `#peach_cp_hit_index#` | `peach_cp_hit_index` | Transformed on `TC` from `event_type` |
 | /events/[]/context | `#page_uri#` | `page_unique_name` | Server side variable |
 | /events/[]/context | `#action#` | `event_source` | |
 | /events/[]/context/component | `#client_name#` | `pretty_app_name` | Server side variable |
