@@ -1,6 +1,6 @@
 {
   "peach_schema_version": "1.0.0, hardcoded.",
-  "peach_implementation_version": "0.0.1, hardcoded.",
+  "peach_implementation_version": "0.0.2, hardcoded.",
   "site_key": "✅ chrts00000000031 for test, chrts00000000032 for prod.",
   "session_start_timestamp": "✅ Number. Timestamp in milliseconds.",
   "sent_timestamp": "✅ Number. Timestamp in milliseconds.",
@@ -34,13 +34,13 @@
         "items" : [ "✅ The presented urn" ],
         "items_displayed" : "1, hardcoded.",
         "page_uri": "ℹ️ Built on TG server: only app_site_name.",
-        "action": "✅ button || automatic || close"
-      },
-      "component" : {
-        "type": "Player page, hardcoded.",
-        "name": "✅ Pretty app name.",
-        "version": "✅ \"Major.Minor.hotfix\"",
-        "feature": "continuous_playback, hardcoded"
+        "action": "✅ button || automatic || close",
+        "component": {
+          "type": "Player page, hardcoded.",
+          "name": "✅ Pretty app name.",
+          "version": "✅ \"Major.Minor.hotfix\"",
+          "feature": "continuous_playback, hardcoded"
+        }
       }
     }
   ]
