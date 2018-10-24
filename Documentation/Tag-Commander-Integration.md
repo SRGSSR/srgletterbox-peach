@@ -60,12 +60,12 @@ The file `tc_peach_letterbox_media_collect_comments.json` is a copy of EBU speci
 | /events/[]/ | `#event_timestamp#` | `TC_NOW_MS` | |
 | /events/[]/props/ | `#event_props_playback_position_s#` | `media_position` | |
 | /events/[]/props/ | `#event_props_playback_timeshift_s#` | `media_timeshift` | |
-| /events/[]/context | `#page_uri#` | `page_unique_name` | Server side variable |
+| /events/[]/context | `#event_context_page_uri#` | `page_unique_name` | Server side variable |
 | /events/[]/context/component | `#event_context_component_name#` | `media_player_display` | |
 | /events/[]/context/component | `#event_context_component_version#` | `media_player_version` | |
-| /events/[]/context/metadata | `#event_context_metadata_type#` | `peach_media_type` | Transformed on TC from `media_type` |
-| /events/[]/context/metadata | `#event_context_metadata_format#` | `peach_media_format` | Transformed on TC from `media_is_livestream` |
-| /events/[]/context/metadata | `#event_context_metadata_duration#` | `media_segment_length` | |
+| /events/[]/metadata | `#event_metadata_type#` | `peach_media_type` | Transformed on TC from `media_type` |
+| /events/[]/metadata | `#event_metadata_format#` | `peach_media_format` | Transformed on TC from `media_is_livestream` |
+| /events/[]/metadata | `#event_metadata_duration#` | `media_segment_length` | |
 
 ## Page View tag
 
@@ -92,7 +92,7 @@ The file `tc_peach_letterbox_pageview_collect comment.json` is a copy of EBU spe
 | JSON | Key | tag commander` | Comment |
 |:--:|:--:|:--:|:--:|
 | /events/[]/ | `#event_timestamp#` | `TC_NOW_MS` | |
-| /events/[]/context | `#page_uri#` | `page_unique_name` | Server side variable |
+| /events/[]/context | `#event_context_page_uri#` | `page_unique_name` | Server side variable |
 
 ## Continuous playback tag
 
@@ -120,12 +120,12 @@ The file `tc_peach_letterbox_continous_playback_collect comment.json` is a copy 
 
 | JSON | Key | tag commander` | Comment |
 |:--:|:--:|:--:|:--:|
-| /events/[]/ | `#peach_reco_type#` | `#peach_reco_type#` | Transformed on `TC` from `event_type` | |
-| /events/[]/ | `#recommendationId#` | `event_value_1` | |
+| /events/[]/ | `#event_type#` | `peach_reco_type` | Transformed on `TC` from `event_type` | |
+| /events/[]/ | `#event_id#` | `event_value_1` | Recommendation id |
 | /events/[]/ | `#event_timestamp#` | `TC_NOW_MS` | |
-| /events/[]/context | `#urn#` | `event_value` | |
-| /events/[]/context | `#peach_cp_hit_index#` | `peach_cp_hit_index` | Transformed on `TC` from `event_type` |
-| /events/[]/context | `#page_uri#` | `page_unique_name` | Server side variable |
-| /events/[]/context | `#action#` | `event_source` | |
-| /events/[]/context/component | `#client_name#` | `pretty_app_name` | Server side variable |
-| /events/[]/context/component | `#client_version#` | `TC_APPLICATION_VERSION` | |
+| /events/[]/context | `#event_context_items_urn#` | `event_value` | Media URN displayed |
+| /events/[]/context | `#event_context_hit_index#` | `peach_cp_hit_index` | Transformed on `TC` from `event_type` |
+| /events/[]/context | `#event_context_page_uri#` | `page_unique_name` | Server side variable |
+| /events/[]/context | `#event_context_action#` | `event_source` | |
+| /events/[]/context/component | `#event_context_component_name#` | `pretty_app_name` | Server side variable |
+| /events/[]/context/component | `#event_context_component_version#` | `TC_APPLICATION_VERSION` | |

@@ -1,6 +1,6 @@
 {
   "peach_schema_version": "1.0.0",
-  "peach_implementation_version": "0.9.2",
+  "peach_implementation_version": "0.9.3",
   "site_key": "#peach_site_key#",
   "session_start_timestamp": #session_start_timestamp#,
   "sent_timestamp": #sent_timestamp#,
@@ -32,7 +32,7 @@
         "playback_timeshift_s": "#event_props_playback_timeshift_s#"
       },
       "context": {
-        "page_uri": "#page_uri#",
+        "page_uri": "#event_context_page_uri#",
         "component": {
           "type": "player",
           "name": "#event_context_component_name#",
@@ -40,9 +40,9 @@
         }
       },
       "metadata": {
-        "type": "#event_context_metadata_type#",
-        "format": "#event_context_metadata_format#",
-        "duration": #event_context_metadata_duration#
+        "type": "#event_metadata_type#",
+        "format": "#event_metadata_format#",
+        "duration": #event_metadata_duration#
       }
     }
   ]

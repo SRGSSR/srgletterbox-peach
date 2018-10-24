@@ -71,7 +71,7 @@ Proposition Play team:
 
         "action" : "button"                       // || "automatic" || "close"  click on button, action without user interation, close the view.
 
-  "component" : {                           // Optional to desribe the way how recommendation is displayed
+        "component" : {                           // Optional to desribe the way how recommendation is displayed
           "type": "player",                     // MUST
           "name": "RTS Player",                //
           "version": "2.3.4",                      // version of player
