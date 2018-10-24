@@ -58,8 +58,7 @@ The file `tc_peach_letterbox_media_collect_comments.json` is a copy of EBU speci
 | /events/[]/ | `#event_type#` | `peach_event_type` | Transformed on TC from `event_id` |
 | /events/[]/ | `#event_id#` | `media_urn` | |
 | /events/[]/ | `#event_timestamp#` | `TC_NOW_MS` | |
-| /events/[]/props/ | `#event_props_playback_position_s#` | `media_position` | |
-| /events/[]/props/ | `#event_props_playback_timeshift_s#` | `media_timeshift` | |
+| /events/[]/props/ | `#event_props_playback_position_s#` | `media_playhead_position` | Server side variable |
 | /events/[]/context | `#event_context_page_uri#` | `page_unique_name` | Server side variable |
 | /events/[]/context/component | `#event_context_component_name#` | `media_player_display` | |
 | /events/[]/context/component | `#event_context_component_version#` | `media_player_version` | |

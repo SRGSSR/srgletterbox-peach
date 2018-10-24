@@ -28,8 +28,7 @@
       "id": "#event_id#",
       "event_timestamp": #event_timestamp#,
       "props": {
-        "playback_position_s": #event_props_playback_position_s#,
-        "playback_timeshift_s": "#event_props_playback_timeshift_s#"
+        "playback_position_s": #event_props_playback_position_s#
       },
       "context": {
         "page_uri": "#event_context_page_uri#",

@@ -33,9 +33,8 @@
       "page_start_timestamp": "⚪️ Not implemented, number.",
       "props": {
         "time_spent_s": "⚪️ Not implemented, number.",
-        "playback_position_s": "✅ Number. In seconds. OnDemand: position, Livestream: time consumed.",
+        "playback_position_s": "✅ Number. In seconds. OnDemand: position, Livestream: o if live, negative seconds if timeshift",
         "previous_playback_position_s": "⚪️ Not implemented, number.",
-        "playback_timeshift_s": "✅ Number, converted from a number. In seconds. OnDemand: empty, Livestream: 0 if live, distance to the live if timesift > 30 seconds.",
         "video_mode": "⚪️ Not implemented.",
         "audio_mode": "⚪️ Not implemented.",
         "playback_rate": "🚮 hardcoded 1.0, number.",
