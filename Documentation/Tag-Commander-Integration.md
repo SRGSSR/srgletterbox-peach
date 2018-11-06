@@ -40,13 +40,14 @@ Specifications are in the `Specifications` folder.
 
 ### Get url
 
-`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&e=#peach_media_type#&d=#navigation_device#`
+`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&e=#peach_media_type#&d=#navigation_device#&p=#media_playhead_position#`
 
 | Parameter | Key | Tag Commander | Comment |
 |:--:|:--:|:--:|:--:|
 | s | `#peach_site_key#` | Select the good one | Defined localy in `TC` |
 | e | `#peach_media_type#` | `peach_media_type` |  Transformed on `TC` from `media_type` |
 | d | `#navigation_device#` | `navigation_device` | Device type `phone`or `tablet` |
+| p | `#media_playhead_position#` | `media_playhead_position` | Server side variable |
  
 ### Post JSON body
 
