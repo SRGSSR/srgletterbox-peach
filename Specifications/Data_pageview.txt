@@ -1,0 +1,10 @@
+{
+"type":"pageview",
+"event_timestamp":1537260799886, // in milliseconds
+"context":
+{	
+"page_uri":"xxx”, // current page // app section
+"referrer":”xxx”  // previous page
+}
+}
+}

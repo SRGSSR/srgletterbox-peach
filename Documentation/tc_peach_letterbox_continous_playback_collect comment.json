@@ -1,0 +1,48 @@
+{
+  "peach_schema_version": "1.0.0, hardcoded.",
+  "peach_implementation_version": "0.9.5, hardcoded.",
+  "site_key": "✅ chrts00000000031 for test, chrts00000000032 for prod.",
+  "session_start_timestamp": "✅ Number. Timestamp in milliseconds.",
+  "sent_timestamp": "✅ Number. Timestamp in milliseconds.",
+  "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
+  "user_id": "⚪️ Not implemented. Only for logged user.",
+  "client": {
+    "id": "✅ Globaly unique id. Tag Commander unique id.",
+    "type": "✅ \"mobileapp\", hardcoded.",
+    "app_id": "✅ App Bundle identifier.",
+    "name": "✅ Pretty app name.",
+    "version": "✅ \"Major.Minor.hotfix\"",
+    "device": {
+      "type": "✅ \"phone\" | \"tablet\" | \"tvbox\"",
+      "vendor": "✅ Vendor name.",
+      "model": "✅ Device model.",
+      "screen_size": "✅ \"width x height\"",
+      "language": "✅ Google ads format. ex: \"en-US\".",
+      "timezone": "⚪️ Not implemented, number."
+    },
+    "os": {
+      "name": "✅ Mobile OS.",
+      "version": "✅ Mobile OS version."
+    }
+  },
+  "events": [
+    {
+      "type": "✅ \"recommendation_displayed\" | \"recommendation_hit\" | \"recommendation_canceled\"",
+      "id": "✅ The recommendation id.",
+      "event_timestamp": "✅ Number. Timestamp in milliseconds.",
+      "context": {
+        "items" : [ "✅ The presented urn" ],
+        "items_displayed" : "1, hardcoded.",
+        "hit_index" : "✅ The selected urn, send this \"recommendation_hit\".",
+        "page_uri": "ℹ️ Built on TG server: only app_site_name.",
+        "action": "✅ button || automatic || close",
+        "component": {
+          "type": "Player page, hardcoded.",
+          "name": "✅ Pretty app name.",
+          "version": "✅ \"Major.Minor.hotfix\"",
+          "feature": "continuous_playback, hardcoded"
+        }
+      }
+    }
+  ]
+}
