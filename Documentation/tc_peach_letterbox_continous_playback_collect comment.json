@@ -5,7 +5,7 @@
   "session_start_timestamp": "✅ Number. Timestamp in milliseconds.",
   "sent_timestamp": "✅ Number. Timestamp in milliseconds.",
   "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
-  "user_id": "⚪️ Not implemented. Only for logged user.",
+  "user_id": "✅ For logged user. \"Unknow\" for not logged user.",
   "client": {
     "id": "✅ Globaly unique id. Tag Commander unique id.",
     "type": "✅ \"mobileapp\", hardcoded.",

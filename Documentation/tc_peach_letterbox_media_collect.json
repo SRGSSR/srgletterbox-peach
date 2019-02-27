@@ -4,6 +4,7 @@
   "site_key": "#peach_site_key#",
   "session_start_timestamp": #session_start_timestamp#,
   "sent_timestamp": #sent_timestamp#,
+  "user_id": "#peach_user_id#",
   "client": {
     "id": "#client_id#",
     "type": "mobileapp",
