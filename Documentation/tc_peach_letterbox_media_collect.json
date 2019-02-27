@@ -32,6 +32,7 @@
         "playback_position_s": #event_props_playback_position_s#
       },
       "context": {
+        "id": "#event_context_id#",
         "page_uri": "#event_context_page_uri#",
         "component": {
           "type": "player",

@@ -43,7 +43,7 @@
         }
       },
       "context": {
-        "id": "⚪️ Not implemented.",
+        "id": "✅ Source id. Like a recommendation id.",
         "referrer": "⚪️ Not implemented.",
         "page_uri": "ℹ️ Built on TG server: only app_site_name ",
         "source": "⚪️ Not implemented.",
