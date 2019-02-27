@@ -17,7 +17,7 @@ Specifications are in the `Specifications` folder.
 | / | `#peach_site_key#` | Select the good one | Defined localy in `TC` |
 | / | `#session_start_timestamp#` | `TC_CURRENT_VISIT_MS` | |
 | / | `#sent_timestamp#` | `TC_NOW_MS` | |
-| / | `#peach_user_id#` | `peach_user_id` | Transformed on `TC` from `user_id` |
+| / | `#user_id#` | `peach_user_id` | Transformed on `TC` from `user_id` |
 | /client/ | `#client_id#` | `TC_UNIQUEID` | |
 | /client/ | `#client_app_id#` | `TC_BUNDLE_IDENTIFIER` | |
 | /client/ | `#client_name#` | `pretty_app_name` | Server side variable |
