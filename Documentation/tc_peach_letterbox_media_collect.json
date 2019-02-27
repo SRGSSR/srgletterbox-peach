@@ -1,6 +1,6 @@
 {
   "peach_schema_version": "1.0.0",
-  "peach_implementation_version": "0.9.5",
+  "peach_implementation_version": "0.9.6",
   "site_key": "#peach_site_key#",
   "session_start_timestamp": #session_start_timestamp#,
   "sent_timestamp": #sent_timestamp#,
