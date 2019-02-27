@@ -41,7 +41,7 @@ Specifications are in the `Specifications` folder.
 
 ### Get url
 
-`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&e=#peach_media_type#&d=#navigation_device#&p=#media_playhead_position#`
+`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&e=#peach_media_type#&d=#navigation_device#&p=#media_playhead_position#&pui=#peach_user_id#&sid=#source_id#`
 
 | Parameter | Key | Tag Commander | Comment |
 |:--:|:--:|:--:|:--:|
@@ -49,6 +49,7 @@ Specifications are in the `Specifications` folder.
 | e | `#peach_media_type#` | `peach_media_type` |  Transformed on `TC` from `media_type` |
 | d | `#navigation_device#` | `navigation_device` | Device type `phone`or `tablet` |
 | p | `#media_playhead_position#` | `media_playhead_position` | Server side variable |
+| pui | `#peach_user_id#` | `peach_user_id ` | Transformed on `TC` from `user_id` |
  
 ### Post JSON body
 
@@ -79,12 +80,13 @@ The file `tc_peach_letterbox_media_collect_comments.json` is a copy of EBU speci
 
 ### Get url
 
-`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&d=#navigation_device#`
+`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&d=#navigation_device#&pui=#peach_user_id#`
 
 | Parameter | Key | Tag Commander | Comment |
 |:--:|:--:|:--:|:--:|
 | s | `#peach_site_key#` | Select the good one | Defined localy in `TC` |
 | d | `#navigation_device#` | `navigation_device` | Device type `phone`or `tablet` |
+| pui | `#peach_user_id#` | `peach_user_id ` | Transformed on `TC` from `user_id` |
 
 ### Post JSON body
 
@@ -107,13 +109,14 @@ The file `tc_peach_letterbox_pageview_collect comment.json` is a copy of EBU spe
 
 ### Get url
 
-`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&d=#navigation_device#&r=#peach_reco_type#`
+`https://pipe-collect.ebu.io/v3/collect?s=#peach_site_key#&d=#navigation_device#&r=#peach_reco_type#&pui=#peach_user_id#`
 
 | Parameter | Key | Tag Commander | Comment |
 |:--:|:--:|:--:|:--:|
 | s | `#peach_site_key#` | Select the good one | Defined localy in `TC` |
 | d | `#navigation_device#` | `navigation_device` | Device type `phone`or `tablet` |
 | r | `#peach_reco_type#` | `peach_reco_type ` | Peach recommendation type, based of `event_type` |
+| pui | `#peach_user_id#` | `peach_user_id ` | Transformed on `TC` from `user_id` |
 
 ### Post JSON body
 
