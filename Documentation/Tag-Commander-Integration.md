@@ -50,6 +50,7 @@ Specifications are in the `Specifications` folder.
 | d | `#navigation_device#` | `navigation_device` | Device type `phone`or `tablet` |
 | p | `#media_playhead_position#` | `media_playhead_position` | Server side variable |
 | pui | `#peach_user_id#` | `peach_user_id ` | Transformed on `TC` from `user_id` |
+| sid | `#source_id#` | `source_id` | |
  
 ### Post JSON body
 
