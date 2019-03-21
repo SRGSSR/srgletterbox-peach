@@ -1,9 +1,10 @@
 {
   "peach_schema_version": "1.0.0",
-  "peach_implementation_version": "0.9.5",
+  "peach_implementation_version": "0.9.6",
   "site_key": "#peach_site_key#",
   "session_start_timestamp": #session_start_timestamp#,
   "sent_timestamp": #sent_timestamp#,
+  "user_id": "#user_id#",
   "client": {
     "id": "#client_id#",
     "type": "mobileapp",
@@ -31,6 +32,7 @@
         "playback_position_s": #event_props_playback_position_s#
       },
       "context": {
+        "id": "#event_context_id#",
         "page_uri": "#event_context_page_uri#",
         "component": {
           "type": "player",

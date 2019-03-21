@@ -1,11 +1,11 @@
 {
   "peach_schema_version": "1.0.0, hardcoded.",
-  "peach_implementation_version": "0.9.5, hardcoded.",
+  "peach_implementation_version": "0.9.6, hardcoded.",
   "site_key": "✅ chrts00000000031 for test, chrts00000000032 for prod.",
   "session_start_timestamp": "✅ Number. Timestamp in milliseconds.",
   "sent_timestamp": "✅ Number. Timestamp in milliseconds.",
   "collect_timestamp": "⚪️ Not implemented. Peach server side. number",
-  "user_id": "⚪️ Not implemented. Only for logged user.",
+  "user_id": "✅ For logged user. \"Unknow\" for not logged user.",
   "client": {
     "id": "✅ Globaly unique id. Tag Commander unique id.",
     "type": "✅ \"mobileapp\", hardcoded.",
@@ -43,7 +43,7 @@
         }
       },
       "context": {
-        "id": "⚪️ Not implemented.",
+        "id": "✅ Source id. Like a recommendation id.",
         "referrer": "⚪️ Not implemented.",
         "page_uri": "ℹ️ Built on TG server: only app_site_name ",
         "source": "⚪️ Not implemented.",
