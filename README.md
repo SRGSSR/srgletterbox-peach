@@ -23,7 +23,7 @@ Peach has tags in the `Measurement lirbary (Letterbox)` container.
 ## Current version in production
 
 - Peach schema version: 1.0.0               
-- Peach implementation version: 0.9.0
+- Peach implementation version: 0.9.6
 
 JSON body integration is in [Tag Commander Integration document](Documentation/Tag-Commander-Integration.md).
 
