@@ -3,7 +3,7 @@
 
 ## History
 
-The Technical Play currently send data in a POST request.
+The Technical Player currently send data in a POST request.
 
 - Video: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=video
 - Audio: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=audio
@@ -12,7 +12,7 @@ The POST request sends a JSON, build with a `pipe.js` script.
 
 ## Mobile version for Letterbox
 
-The mobile team decided to use the Tag Commander architecture. Letterbox iOS and Android are already send stream measurements to WebTreck through Tag Commander with the Tag Commander SDK, integrated in SRGAnalytics libraries.
+The mobile team decided to use the Tag Commander architecture. Letterbox iOS and Android are already send stream measurements to WebTrekk through Tag Commander with the Tag Commander SDK, integrated in SRGAnalytics libraries.
 
 ## Tag Commander
 
@@ -24,6 +24,8 @@ Peach has tags in the `Measurement lirbary (Letterbox)` container.
 
 - Peach schema version: 1.0.0               
 - Peach implementation version: 0.9.6
+
+It's now send to https://datacollection.rts.ch/api/events
 
 JSON body integration is in [Tag Commander Integration document](Documentation/Tag-Commander-Integration.md).
 
