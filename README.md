@@ -7,10 +7,10 @@ RTS switched to an internal service on Azure and AWS, with same datas and APIs.
 
 ## History
 
-The Technical Player currently send data in a POST request.
+Letterbox web currently send data in a POST request.
 
-- Video: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=video
-- Audio: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=audio
+- Video: https://datacollection.rts.ch/api/events?s=chrts00000000006&e=video
+- Audio: https://datacollection.rts.ch/api/events?s=chrts00000000006&e=audio
 
 The POST request sends a JSON, build with a `pipe.js` script.
 
@@ -20,20 +20,21 @@ The mobile team uses the Tag Commander architecture. Letterbox iOS and Android a
 
 ## Tag Commander
 
-https://v6.commandersact.com
+https://app.commandersact.com/
 
-Peach had tags in the `srg-analytics-android-ios-tvos` container.
+RTS Pipe.js destinations are in the container 3666.
 
-Azure RTS has tags in the same `srg-analytics-android-ios-tvos` container.
+Destination names are like "SRGAnalytics Android-Apple / RTS Pipe.js [XXX] Event".
+"RTS Pipe.js" is the service name used in User Consent tool.
 
 ## Current version in production
 
 - Peach schema version: 1.0.0               
-- Peach implementation version: 0.9.6
+- Peach implementation version: 0.9.8
 
 **Data sents to https://datacollection.rts.ch/api/events**
 
-JSON body integration is in [Tag Commander Integration document](Documentation/Tag-Commander-Integration.md).
+JSON body implementation is in [Documentation-server_v2 read me](Documentation-server_v2/ReadMe.md).
 
 
 
