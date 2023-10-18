@@ -2,13 +2,17 @@
 
 # Global
 
-Mobile native Commanders Act SDK are in version 5 and more.
+`RTS Azure` tags are renamed `RTS Pipe.js` destinations in server V2.
 
-We tried first a [destination buider](https://doc.commandersact.com/features/destinations/destination-builder). But Spike was not validate it. Switched to webhook first, but array are not available and not easy to save and versioning implementation. As described above, we got beta to `Webhook with JSON` destination.
+Native Commanders Act SDKs for Android and Apple are in version 5 and more.
 
-`RTS Azure` is renamed `RTS Pipe.js`.
+We tried first a [destination buider](https://doc.commandersact.com/features/destinations/destination-builder). But Spike was not validate it. We switched to webhook first, but array are not available and not easy to save implementation and versioning it. We got access to `Webhook with JSON` beta destination. Spike works and all destinations use it.
 
-# Destinations
+# Mapping help
+
+Properties from Android and Apple SDKs are described [here](https://community.commandersact.com/platform-x/developers/tracking/about-events/mobile-sdk-event-specificity).
+
+# RTS Pipe.js destinations
 
 ## Common settings
 
@@ -39,7 +43,7 @@ For each destinations, select the `SRGAnalytics` sources:
 - Apple Dev
 - Apple Prod
 
-## RTS Pipe.js Page View Event destination
+## Page View Event destination
 
 Destination: [SRGAnalytics Android-Apple / RTS Pipe.js Page View Event](https://app.commandersact.com/en/3666/destinations/109/settings).
 
@@ -100,7 +104,7 @@ Text:
 event_name = "page_view" AND EXISTS(page_unique_name) AND navigation_app_site_name STARTSWITH "rts-" AND consent_services CONTAINS "sKiYj0vEg5bgqv"
 ```
 
-## RTS Pipe.js Media Event destination
+## Media Event destination
 
 Destination: [SRGAnalytics Android-Apple / RTS Pipe.js Media Event](https://app.commandersact.com/en/3666/destinations/110/settings).
 
@@ -176,7 +180,7 @@ Text:
 EXISTS(media_urn) AND event_name IN ("play", "pause", "seek", "eof", "stop", "pos", "uptime", "segment") AND navigation_app_site_name STARTSWITH "rts-" AND consent_services CONTAINS "sKiYj0vEg5bgqv"
 ```
 
-## RTS Pipe.js ContinuousPlayback Event destination
+## ContinuousPlayback Event destination
 
 Destination: [SRGAnalytics Android-Apple / RTS Pipe.js ContinuousPlayback Event](https://app.commandersact.com/en/3666/destinations/108/settings).
 
@@ -247,7 +251,3 @@ Text:
 ```
 event_name = "continuous_playback" AND EXISTS(event_type) AND navigation_app_site_name STARTSWITH "rts-" AND consent_services CONTAINS "sKiYj0vEg5bgqv"
 ```
-
-# Mapping help
-
-Properties from iOS and Android SDKs are described [here](https://community.commandersact.com/platform-x/developers/tracking/about-events/mobile-sdk-event-specificity).
