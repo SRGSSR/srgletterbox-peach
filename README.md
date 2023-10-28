@@ -31,14 +31,14 @@ Destination names are like "SRGAnalytics Android-Apple / RTS Pipe.js [XXX] Event
 
 **Data sents to https://datacollection.rts.ch/api/events**
 
-**On server V2:**
+**On server V2: ([destinations](https://app.commandersact.com/en/3666/destinations))**
 
 - Peach schema version: 1.0.0               
 - Peach implementation version: 0.9.8
 
 JSON body implementation is in [Documentation server v2](Documentation-server_v2/README.md) read me.
 
-**On server V1:** (for old apps)
+**On server V1 ([tags](https://platform.commandersact.com/en/3666/containers/edit/10/srg-analytics-android-ios-tvos/tag/267/azure-pageview-rts-prod)):** (for old apps)
 
 - Peach schema version: 1.0.0               
 - Peach implementation version: 0.9.7
