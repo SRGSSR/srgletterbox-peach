@@ -79,7 +79,7 @@ Text:
             "vendor": "{{device.manufacturer}}",
             "model": "{{device.name}}",
             "screen_size": "{{device.screen.width}}x{{device.screen.height}}",
-            "language": "{{tc_language}}"
+            "language": "{{device.language}}-{{device.region}}"
         },
         "os": {
             "name": "{{device.os.name}}",
@@ -140,7 +140,7 @@ Text:
             "vendor": "{{device.manufacturer}}",
             "model": "{{device.name}}",
             "screen_size": "{{device.screen.width}}x{{device.screen.height}}",
-            "language": "{{tc_language}}"
+            "language": "{{device.language}}-{{device.region}}"
         },
         "os": {
             "name": "{{device.os.name}}",
@@ -216,7 +216,7 @@ Text:
             "vendor": "{{device.manufacturer}}",
             "model": "{{device.name}}",
             "screen_size": "{{device.screen.width}}x{{device.screen.height}}",
-            "language": "{{tc_language}}"
+            "language": "{{device.language}}-{{device.region}}"
         },
         "os": {
             "name": "{{device.os.name}}",
