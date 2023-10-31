@@ -7,33 +7,41 @@ RTS switched to an internal service on Azure and AWS, with same datas and APIs.
 
 ## History
 
-The Technical Player currently send data in a POST request.
+Technical Player, then [Letterbox web](https://github.com/sRGSSR/srgletterbox-web/) currently sends data in a POST request.
 
-- Video: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=video
-- Audio: https://pipe-collect.ebu.io/v1/collect?s=chrts00000000006&e=audio
+- Video: https://datacollection.rts.ch/api/events?s=chrts00000000006&e=video
+- Audio: https://datacollection.rts.ch/api/events?s=chrts00000000006&e=audio
 
-The POST request sends a JSON, build with a `pipe.js` script.
+The POST request sends a JSON payload, built with a `pipe.js` script.
 
 ## Native version for Letterbox (mobile and big screen)
 
-The mobile team uses the Tag Commander architecture. Letterbox iOS and Android are already send stream measurements to WebTrekk through Tag Commander with the Tag Commander SDK, integrated in `SRGAnalytics` libraries. One hit from the native library can be dispatch on several backends, server side.
+The Play mobile team uses the Tag Commander architecture from Commanders Act. Letterbox Apple and Android are already send stream measurements to WebTrekk through Tag Commander with the Commanders Act SDK, integrated in `SRGAnalytics` libraries. One hit from the native library can be dispatch on several backends, server side.
 
 ## Tag Commander
 
-https://v6.commandersact.com
+https://app.commandersact.com/
 
-Peach had tags in the `srg-analytics-android-ios-tvos` container.
+RTS Pipe.js destinations are in the container `3666`.
 
-Azure RTS has tags in the same `srg-analytics-android-ios-tvos` container.
+Destination names are like "SRGAnalytics Android-Apple / RTS Pipe.js [XXX] Event".
+"RTS Pipe.js" is the service name used in User Consent tool.
 
 ## Current version in production
 
-- Peach schema version: 1.0.0               
-- Peach implementation version: 0.9.6
-
 **Data sents to https://datacollection.rts.ch/api/events**
 
-JSON body integration is in [Tag Commander Integration document](Documentation/Tag-Commander-Integration.md).
+**On server V2: ([destinations](https://app.commandersact.com/en/3666/destinations))**
 
+- Peach schema version: 1.0.0               
+- Peach implementation version: 0.9.8
 
+JSON body implementation is in [Documentation server v2](Documentation-server_v2/README.md) read me.
+
+**On server V1 ([tags](https://platform.commandersact.com/en/3666/containers/edit/10/srg-analytics-android-ios-tvos/tag/267/azure-pageview-rts-prod)):** (for old apps)
+
+- Peach schema version: 1.0.0               
+- Peach implementation version: 0.9.7
+
+JSON body implementation is in [Documentation server v1](Documentation-server_v1/README.md) read me.
 
