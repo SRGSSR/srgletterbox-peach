@@ -65,8 +65,8 @@ Text:
     "peach_schema_version": "1.0.0",
     "peach_implementation_version": "0.9.8",
     "site_key": "{{ IF(source_key IN("3909d826-0845-40cc-a69a-6cec1036a45c", "1b30366c-9e8d-4720-8b12-4165f468f9ae"), "chrts00000000032", "chrts00000000031") }}",
-    "session_start_timestamp": {{device.lifecycle.current_visit}},
-    "sent_timestamp": {{device.lifecycle.current_session}},
+    "session_start_timestamp": {{device.lifecycle.current_visit * 1000}},
+    "sent_timestamp": {{device.lifecycle.current_session * 1000}},
     "user_id": "{{ IF(ISEMPTY(user_id), "unknown", user_id) }}",
     "client": {
         "id": "{{device.sdk_id}}",
@@ -88,7 +88,7 @@ Text:
     },
     "event": {
         "type": "pageview",
-        "event_timestamp": {{device.lifecycle.current_session}},
+        "event_timestamp": {{device.lifecycle.current_session * 1000}},
         "context": {
             "page_uri": "{{page_unique_name}}"
         }
@@ -126,8 +126,8 @@ Text:
     "peach_schema_version": "1.0.0",
     "peach_implementation_version": "0.9.8",
     "site_key": "{{ IF(source_key IN("3909d826-0845-40cc-a69a-6cec1036a45c", "1b30366c-9e8d-4720-8b12-4165f468f9ae"), "chrts00000000032", "chrts00000000031") }}",
-    "session_start_timestamp": {{device.lifecycle.current_visit}},
-    "sent_timestamp": {{device.lifecycle.current_session}},
+    "session_start_timestamp": {{device.lifecycle.current_visit * 1000}},
+    "sent_timestamp": {{device.lifecycle.current_session * 1000}},
     "user_id": "{{ IF(ISEMPTY(user_id), "unknown", user_id) }}",
     "client": {
         "id": "{{device.sdk_id}}",
@@ -150,7 +150,7 @@ Text:
     "event": {
         "type": "{{ IF(event_name="play", "media_play", IF(event_name="pause", "media_pause", IF(event_name="seek", "media_seek", IF(event_name="stop", "media_stop", IF(event_name="eof", "media_eof", IF(event_name="pos", "media_heartbeat", null)))))) }}",
         "id": "{{media_urn}}",
-        "event_timestamp": {{device.lifecycle.current_session}},
+        "event_timestamp": {{device.lifecycle.current_session * 1000}},
         "props": {
             "playback_position_s": "{{media_playhead_position}}"
         },
@@ -202,8 +202,8 @@ Text:
     "peach_schema_version": "1.0.0",
     "peach_implementation_version": "0.9.8",
     "site_key": "{{ IF(source_key IN("3909d826-0845-40cc-a69a-6cec1036a45c", "1b30366c-9e8d-4720-8b12-4165f468f9ae"), "chrts00000000032", "chrts00000000031") }}",
-    "session_start_timestamp": {{device.lifecycle.current_visit}},
-    "sent_timestamp": {{device.lifecycle.current_session}},
+    "session_start_timestamp": {{device.lifecycle.current_visit * 1000}},
+    "sent_timestamp": {{device.lifecycle.current_session * 1000}},
     "user_id": "{{ IF(ISEMPTY(user_id), "unknown", user_id) }}",
     "client": {
         "id": "{{device.sdk_id}}",
@@ -226,7 +226,7 @@ Text:
     "event": {
         "type": "{{ IF(event_type = "play_media", "recommendation_hit", IF(event_type = "cancel", "recommendation_cancelled", IF(event_type = "display", "recommendation_displayed", "NaN"))) }}",
         "id": "{{event_value_1}}",
-        "event_timestamp": {{device.lifecycle.current_session}},
+        "event_timestamp": {{device.lifecycle.current_session * 1000}},
         "context": {
             "items" : [ "{{event_value}}" ],
             "items_displayed" : 1,
